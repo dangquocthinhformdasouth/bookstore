@@ -1,0 +1,120 @@
+.carousel-img {
+    width: 100%;
+}
+
+#menu {
+    display: block;
+}
+
+.nuthien {
+    display: none;
+    border-radius: 50px;
+    border: solid black;
+    background: white;
+    color: black;
+    margin: 2px;
+    margin-left: 50%;
+}
+
+.nutan {
+    border-radius: 50px;
+    border: solid white;
+    background: white;
+    margin: 2px;
+}
+
+.text-none {
+    text-decoration: none;
+    transition: 0.7s;
+    color: white;
+}
+
+.text-none:hover {
+    margin-left: 15px;
+    font-weight: bold;
+    color: black;
+}
+
+.card-books-new {
+    width: 100%;
+}
+
+.gia-goc {
+    text-decoration: line-through red;
+}
+
+.can-deu {
+    text-align: justify;
+}
+
+.img-sale {
+    box-shadow: 11px 10px 5px #888;
+    width: 140%;
+    transition: 0.2s;
+}
+
+.sale {
+    background: url(img/bg-giamgia.jpg);
+}
+
+.nut {
+    border-radius: 5px 5px 5px 5px;
+    text-align: center;
+    box-shadow: 0px 0px 0px 1px whitesmoke;
+}
+
+.nut:hover {
+    border-radius: 5px 5px 5px 5px;
+    text-align: center;
+    box-shadow: 0px 0px 4px 3px black;
+}
+
+.nutmenu {
+    text-decoration: none;
+    color: white;
+}
+
+.nutmenu:hover {
+    color: white;
+    cursor: pointer;
+    border-bottom: solid #888;
+}
+
+.formbody {
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0), #888);
+}
+
+.hidden {
+    display: none;
+}
+
+.bg-xanh {
+    background-color: rgb(26, 144, 99);
+    color: white;
+}
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+    background: #f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-container.active {
+    display: none;
+}
+
+.loader-container img {
+    height: 10rem;
+}
+
+#box {
+    width: 100vh;
+    display: none;
+}

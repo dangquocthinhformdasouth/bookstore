@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jquery-ui-1.13.2/jquery-ui.css" type="text/css">
+</head>
+
+<body id="body">
+    <div class="container-fluid bg-dark text-white" id="menu">
+        <div class="row">
+            <div class="col-md-2 d-flex justify-content-center"><span class="px-2 py-1"><i class="bi bi-telephone-fill"></i> Holine: 0898 515 689</span></div>
+            <div class="col-md-2 d-flex justify-content-center"><span class=" py-1"><i class="bi bi-envelope-fill"></i>  thinhd601@gmail.com</span></div>
+            <div class="col-md-4 d-flex justify-content-center">
+                <span class="px-2 py-1"> <a class="nutmenu" href="#">Giới thiệu</a> |</span>
+                <span class="px-2 py-1" id="kenh"> <a class="nutmenu" href="#">Kênh</a> |</span>
+                <span class="px-2 py-1"><a class="nutmenu" id="gy" href="#">Góp ý</a></span>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center px-1">
+                <span class="px-2 py-1"> <a class="nutmenu" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-person-fill"></i> Đăng nhập </a></span>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header  bg-success">
+                                <h5 class="modal-title h4 text-center text-white" id="exampleModalLabel"><img src="img/logo2.jpg" style="width: 45px;;" alt=""> ĐĂNG NHẬP</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <label for="" class="my-1 text-dark">Nhập tên tài khoản<span class="text-danger">*</span></label>
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="tendangnhap" placeholder="name@example.com">
+                                    <label for="floatingInput" class="text-success">Tên tài khoản</label>
+                                </div>
+                                <label for="" class="my-1 text-dark">Nhập mật khẩu<span class="text-danger">*</span></label>
+                                <div class="form-floating input-group mb-3">
+                                    <input class="form-control ip" type="password" id="matkhaudangnhap" placeholder="name@example.com">
+                                    <span class="input-group-text bg-dark" id="basic-addon2">
+                                        <i class="fa-solid fa-eye eyeMo hidden text-light"></i>
+                                        <i class="fa-solid fa-eye-slash eyeDong text-light"></i>
+                                    </span>
+                                    <label for="floatingInput" class="text-success">Mật khẩu</label>
+
+                                </div>
+                                <hr class="text-success">
+                                <label for="" class="my-1 text-center text-success h6">Hoặc đăng nhập bằng</label>
+                                <center>
+                                    <button type="button" class="btn btn-primary rounded-pill my-1"><span class="fa-brands fa-facebook " style="font-size:17px ;"></span> Đăng nhập bằng Facebook</button>
+                                    <button type="button" class="btn btn-danger rounded-pill my-1 px-4"><span class="fa-brands fa-google" style="font-size:17px ;"></span> Đăng nhập bằng Google</button>
+                                </center>
+                            </div>
+                            <center>
+                                <button type="button" class="btn btn-success px-5 my-2" onclick="dangnhap()">Đăng nhập</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <span class="px-2 py-1"> <a class="nutmenu" href="dangky.html"><i class="bi bi-person-plus-fill"></i> Đăng ký </a></span>
+                <button class="nutan" onclick="nutan()"><i class="bi bi-eye-slash-fill" ></i></button>
+                <div class="form-check form-switch">
+                    <input class="form-check-input my-2 mx-1" type="checkbox" id="dee" onclick="h()">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <button class="nuthien" id="nuthien" onclick="nuthien()"><i class="bi bi-eye-fill"></i></button>
+    <!--Header-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark px-4 fixed-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="javascript:void(0)"><i class="bi bi-book-half"></i> Books Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item my-2 px-4">
+                        <a class="nav-link text-white nut" href="#">Trang chủ</a>
+                    </li>
+                    <li class="nav-item my-2 px-5">
+                        <a class="nav-link text-white nut" href="#chayhang">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item my-2 px-5">
+                        <a class="nav-link text-white nut" href="#tieuthuyet">Giảm giá</a>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a class="nav-link" href="javascript:void(0)">
+                            <div class="input-group">
+                                <div class="input-group-text bg-white" id="btnGroupAddon"><i class="bi bi-search"></i></div>
+                                <input type="text" class="form-control" placeholder="Tìm kiếm..." aria-label="Input group example" aria-describedby="btnGroupAddon">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item my-2 px-5">
+                        <a class="nav-link text-white nut" href="javascript:void(0)"><i class="bi bi-cart-fill"></i> Giỏ hàng</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Banner1-->
+    <div class="container-fluid">
+        <div class="row my-2">
+            <div class="col-md-12">
+                <div id="demo" class="carousel slide" data-bs-ride="carousel" style="width:100%;">
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                    </div>
+
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner rounded-3">
+                        <div class="carousel-item active">
+                            <img src="img/carousel3.webp" class="carousel-img d-block">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel2.jpg" class="carousel-img d-block">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel5.png" class="carousel-img d-block">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls/icons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Sanpham-->
+    <div class="container">
+        <div class="row h2 bg-xanh py-3 ps-2 rounded-3 m-1 loaisanpham" id="tieuthuyet">Tiểu Thuyết</div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-3 card-books-new border-white">
+                    <div class="row g-0">
+                        <div class="col-4">
+                            <img src="img/biasach3.jpg" class="rounded-3 card-books-new hinhsanpham" alt="...">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <div class="row">
+                                    <h5 class="card-title h4">Nhà Giả Kim</h5>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 h5 gia-giam ">79.900đ</div>
+                                    <div class="col-6 gia-goc">99.900đ</div>
+                                </div>
+                                <div class="row text-success pb-1">
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star-half-stroke"></i></div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group ">
+                                        <button class="btn btn-outline-success w-50" type="button">Thêm vào <i class="fa-solid fa-cart-shopping"></i></button>
+                                        <button class="btn btn-outline-success w-50" type="button">Mua ngay <i class="fa-solid fa-money-bill-wave"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3 card-books-new border-white">
+                    <div class="row g-0">
+                        <div class="col-4">
+                            <img src="img/biasach1.jpg" class="rounded-3 card-books-new hinhsanpham" alt="...">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <div class="row">
+                                    <h5 class="card-title h4">Hai Số Phận</h5>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 h5 gia-giam ">123.300đ</div>
+                                    <div class="col-6 gia-goc">173.300đ</div>
+                                </div>
+                                <div class="row text-success pb-1">
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star-half-stroke"></i></div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group ">
+                                        <button class="btn btn-outline-success w-50" type="button">Thêm vào <i class="fa-solid fa-cart-shopping"></i></button>
+                                        <button class="btn btn-outline-success w-50" type="button">Mua ngay <i class="fa-solid fa-money-bill-wave"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3 card-books-new border-white">
+                    <div class="row g-0">
+                        <div class="col-4">
+                            <img src="img/biasach2.jpg" class="rounded-3 card-books-new hinhsanpham" alt="...">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <div class="row">
+                                    <h5 class="card-title h4">Hai Số Phận p2</h5>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 h5 gia-giam ">136.900đ</div>
+                                    <div class="col-6 gia-goc">169.900đ</div>
+                                </div>
+                                <div class="row text-success pb-1">
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star-half-stroke"></i></div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group ">
+                                        <button class="btn btn-outline-success w-50" type="button">Thêm vào <i class="fa-solid fa-cart-shopping"></i></button>
+                                        <button class="btn btn-outline-success w-50" type="button">Mua ngay <i class="fa-solid fa-money-bill-wave"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row h3 bg-xanh py-3 ps-2 text-white rounded-3 m-1 loaisanpham" id="loisong">Lối Sống</div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-3 card-books-new border-white">
+                    <div class="row g-0">
+                        <div class="col-4">
+                            <img src="img/biasach7.jpg" class="rounded-3 card-books-new hinhsanpham" alt="...">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <div class="row">
+                                    <h5 class="card-title h4">Khuyến Học</h5>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 h5 gia-giam ">179.900đ</div>
+                                </div>
+                                <div class="row text-success pb-1">
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star-half-stroke"></i></div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group ">
+                                        <button class="btn btn-outline-success w-50" type="button">Thêm vào <i class="fa-solid fa-cart-shopping"></i></button>
+                                        <button class="btn btn-outline-success w-50" type="button">Mua ngay <i class="fa-solid fa-money-bill-wave"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3 card-books-new border-white">
+                    <div class="row g-0">
+                        <div class="col-4">
+                            <img src="img/biasach6.jpg" class="rounded-3 card-books-new hinhsanpham" alt="...">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <div class="row">
+                                    <h5 class="card-title h4">Dám Tha Thứ</h5>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 h5 gia-giam ">63.000đ</div>
+                                    <div class="col-6 gia-goc">77.700đ</div>
+                                </div>
+                                <div class="row text-success pb-1">
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star-half-stroke"></i></div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group ">
+                                        <button class="btn btn-outline-success w-50" type="button">Thêm vào <i class="fa-solid fa-cart-shopping"></i></button>
+                                        <button class="btn btn-outline-success w-50" type="button">Mua ngay <i class="fa-solid fa-money-bill-wave"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3 card-books-new border-white">
+                    <div class="row g-0">
+                        <div class="col-4">
+                            <img src="img/biasach5.jpg" class="rounded-3 card-books-new hinhsanpham" alt="...">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <div class="row">
+                                    <h5 class="card-title h4">Đắc Nhân Tâm</h5>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 h5 gia-giam ">99.900đ</div>
+                                    <div class="col-6 gia-goc">139.900đ</div>
+                                </div>
+                                <div class="row text-success pb-1">
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star-half-stroke"></i></div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group ">
+                                        <button class="btn btn-outline-success w-50" type="button">Thêm vào <i class="fa-solid fa-cart-shopping"></i></button>
+                                        <button class="btn btn-outline-success w-50" type="button">Mua ngay <i class="fa-solid fa-money-bill-wave"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row h3 bg-xanh py-3 ps-2 rounded-3 m-1 loaisanpham" id="truyentranh">Truyện Tranh</div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-3 card-books-new border-white">
+                    <div class="row g-0">
+                        <div class="col-4">
+                            <img src="img/biasach9.webp" class="rounded-3 card-books-new hinhsanpham" alt="...">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <div class="row">
+                                    <h5 class="card-title h4">Demon Slayer</h5>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 h5 gia-giam ">18.900đ</div>
+                                </div>
+                                <div class="row text-success pb-1">
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star-half-stroke"></i></div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group ">
+                                        <button class="btn btn-outline-success w-50" type="button">Thêm vào <i class="fa-solid fa-cart-shopping"></i></button>
+                                        <button class="btn btn-outline-success w-50" type="button">Mua ngay <i class="fa-solid fa-money-bill-wave"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3 card-books-new border-white">
+                    <div class="row g-0">
+                        <div class="col-4">
+                            <img src="img/biasach10.jpg" class="rounded-3 card-books-new hinhsanpham" alt="...">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <div class="row">
+                                    <h5 class="card-title h4">One Piece</h5>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 h5 gia-giam ">23.300đ</div>
+                                </div>
+                                <div class="row text-success pb-1">
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star-half-stroke"></i></div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group ">
+                                        <button class="btn btn-outline-success w-50" type="button">Thêm vào <i class="fa-solid fa-cart-shopping"></i></button>
+                                        <button class="btn btn-outline-success w-50" type="button">Mua ngay <i class="fa-solid fa-money-bill-wave"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3 card-books-new border-white">
+                    <div class="row g-0">
+                        <div class="col-4">
+                            <img src="img/biasach8.jpg" class="rounded-3 card-books-new hinhsanpham" alt="...">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <div class="row">
+                                    <h5 class="card-title h4">SPY x Family</h5>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 h5 gia-giam ">23.000đ</div>
+                                </div>
+                                <div class="row text-success pb-1">
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star"></i></div>
+                                    <div class="col-1"><i class="fa-solid fa-star-half-stroke"></i></div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group ">
+                                        <button class="btn btn-outline-success w-50" type="button">Thêm vào <i class="fa-solid fa-cart-shopping"></i></button>
+                                        <button class="btn btn-outline-success w-50" type="button">Mua ngay <i class="fa-solid fa-money-bill-wave"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Banner2-->
+    <div class="container-fluid sale mb-3 p-5" id="chayhang">
+        <div class="row h2">
+            <p class="text-center text-success">Cháy hàng</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mt-5">
+                <div class="row">
+                    <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel" style="width:100%;">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <span class="col-3 ms-5 me-4">
+                                        <img src="img/biasach1.jpg" class="d-block img-sale" alt="...">
+                                    </span>
+                                    <span class="col-3 ms-4">
+                                        <img src="img/biasach2.jpg" class="d-block img-sale" alt="...">
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <span class="col-3 ms-5 me-4">
+                                        <img src="img/biasach4.jpg" class="d-block img-sale" alt="...">
+                                    </span>
+                                    <span class="col-3 ms-4">
+                                        <img src="img/biasach3.jpg" class="d-block img-sale" alt="...">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <img src="img/kesach.png " style="width:90%; " alt=" ">
+                    <center>
+                        <a href="" class="btn btn-success me-5">Mua ngay</a>
+                    </center>
+                </div>
+            </div>
+            <div class="col-md-4 mt-5">
+                <div class="row">
+                    <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel" style="width:100%;">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <span class="col-3 ms-5 me-4">
+                                        <img src="img/biasach7.jpg" class="d-block img-sale" alt="...">
+                                    </span>
+                                    <span class="col-3 ms-4">
+                                        <img src="img/biasach6.jpg" class="d-block img-sale" alt="...">
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <span class="col-3 ms-5 me-4">
+                                        <img src="img/biasach8.jpg" class="d-block img-sale" alt="...">
+                                    </span>
+                                    <span class="col-3 ms-4">
+                                        <img src="img/biasach5.jpg" class="d-block img-sale" alt="...">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <img src="img/kesach.png " style="width:90%; " alt=" ">
+                    <center>
+                        <a href="" class="btn btn-success me-5">Mua ngay</a>
+                    </center>
+                </div>
+            </div>
+            <div class="col-md-4 mt-5">
+                <div class="row">
+                    <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel" style="width:100%;">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <span class="col-3 ms-5 me-4">
+                                        <img src="img/biasach1.jpg" class="d-block img-sale" alt="...">
+                                    </span>
+                                    <span class="col-3 ms-4">
+                                        <img src="img/biasach2.jpg" class="d-block img-sale" alt="...">
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <span class="col-3 ms-5 me-4">
+                                        <img src="img/biasach4.jpg" class="d-block img-sale" alt="...">
+                                    </span>
+                                    <span class="col-3 ms-4">
+                                        <img src="img/biasach3.jpg" class="d-block img-sale" alt="...">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <img src="img/kesach.png " style="width:90%; " alt=" ">
+                    <center>
+                        <a href="" class="btn btn-success me-5">Mua ngay</a>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <p class="can-deu">"Chỉ có sách mới cho ta biết tới sự thật, cái đẹp hoàn mỹ và tình yêu". "Sách là một phép thuật di động độc đáo"... Có rất nhiều những câu nói hay về sách và có lẽ chẳng từ ngữ nào có thể diễn tả được hết tầm quan trọng, lợi ích, giá trị của
+                những cuốn sách. <br>Sách là kho báu vô tận, là đúc kết những tinh hoa, tri thức của cả nhân loại, là sự kết tinh của lớp lớp thế hệ. Sở hữu một cuốn sách hay chính là chìa khóa quyền năng để chúng ta có thể chinh phục được những khó khăn,
+                thử thách phía trước nhằm vươn đến thành công. Nói một cách dễ hiểu, sách có thể làm thay đổi cuộc đời của con người theo chiều hướng tốt đẹp hơn.</p>
+        </div>
+    </div>
+    <!--footer-->
+    <footer class="text-center text-lg-start bg-success text-white ">
+        <section class=" pt-3 border-bottom ">
+            <p class="text-center h2 "><i class="bi bi-book-half"></i> BOOKSTORE</p>
+        </section>
+        <section>
+            <div class="container text-center text-md-start mt-5 ">
+                <div class="row mt-3 r ">
+                    <div class="col-md-3 mx-auto mb-4 ">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 ">
+                            DỊCH VỤ
+                        </h6>
+                        <p>
+                            <a href="#! " class="text-none ">Điều khoản sử dụng</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-none ">Chính sách bảo mật</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-none ">Phương thức ưu đãi</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-none ">Chăm sóc khách hàng</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3 mx-auto mb-4 ">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 ">
+                            TÀI KHOẢN CỦA TÔI
+                        </h6>
+                        <p>
+                            <a href=" " class="text-none ">Đăng nhập/Tạo tài khoản mới</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-none ">Chi tiết tài khoản</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-none ">Ưu đãi</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-none ">Lịch sử mua hàng</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3 mx-auto mb-md-0 mb-4 ">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 ">
+                            LIÊN HỆ
+                        </h6>
+                        <p><i class="fas fa-home me-3 "></i> Trường Cao Đẳng Cần Thơ</p>
+                        <p>
+                            <i class="fas fa-envelope me-3 "></i> akaza369@bookstore.com.vn
+                        </p>
+                        <p><i class="fas fa-phone me-3 "></i>07113952103</p>
+                    </div>
+                    <div class="col-md-3 mx-auto mb-4 border-start ">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.0326630758086!2d105.76298841376212!3d10.0141606755404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a088337f302b39%3A0x6ae5bb5ecf4928b9!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEPhuqduIFRoxqEsIDQxMyDEkcaw4budbmcgMzAgVGjDoW5nIDQsIHBoxrDhu51uZyBIxrBuZyBM4bujaSwgcXXhuq1uIE5pbmggS2nhu4F1LCA0MTMgxJDGsOG7nW5nIDMwIFRow6FuZyA0LCBIxrBuZyBM4bujaSwgTmluaCBLaeG7gXUsIEPhuqduIFRoxqEgOTIwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1654954698805!5m2!1svi!2s "
+                            width="100% " height="300px " style="border:0; " class="maps " allowfullscreen=" " loading="lazy " referrerpolicy="no-referrer-when-downgrade "></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!--Dialog-->
+    <div id="box" class="bg-success">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ywd_KulXEwU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <!--Loader-->
+    <div class="loader-container">
+        <img src="img/loader-img.gif" alt="">
+    </div>
+</body>
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="jquery-ui-1.13.2/jquery-ui.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#gy').click(function() {
+            var gopy = prompt("Nhập góp ý của bạn vào phía bên dưới")
+            if (gopy != "") {
+                alert("Góp ý thành công ! Cảm ơn bạn đã góp ý")
+            } else {
+                alert("Góp ý không thành công !");
+            }
+        });
+    });
+    $(document).ready(function() {
+        $('.loaisanpham').mouseover(function() {
+            $(this).css('background-color', '#888', $(this).mouseleave(function() {
+                $(this).css('background-color', 'rgb(26, 144, 99)')
+            }));
+        });
+    });
+    $(document).ready(function() {
+        $("#kenh").click(function() {
+            $("#box").dialog({
+                modal: true,
+                fluid: true,
+                title: 'Review các kênh sách hay',
+                width: 605,
+                height: 405
+            })
+        })
+    })
+</script>
+
+</html>

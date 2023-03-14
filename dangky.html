@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jquery-ui-1.13.2/jquery-ui.css" type="text/css">
+</head>
+
+<body id="body">
+    <div class="container-fluid bg-dark text-white" id="menu">
+        <div class="row">
+            <div class="col-md-2 d-flex justify-content-center"><span class="px-2 py-1"><i class="bi bi-telephone-fill"></i> Holine: 0898 515 689</span></div>
+            <div class="col-md-2 d-flex justify-content-center"><span class=" py-1"><i class="bi bi-envelope-fill"></i>  thinhd601@gmail.com</span></div>
+            <div class="col-md-4 d-flex justify-content-center">
+                <span class="px-2 py-1"> <a class="nutmenu" href="#">Giới thiệu</a> |</span>
+                <span class="px-2 py-1" id="kenh"> <a class="nutmenu" href="#">Kênh</a> |</span>
+                <span class="px-2 py-1"><a class="nutmenu" id="gy" href="#">Góp ý</a></span>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center px-1">
+                <span class="px-2 py-1"> <a class="nutmenu" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-person-fill"></i> Đăng nhập </a></span>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header  bg-success">
+                                <h5 class="modal-title h4 text-center text-white" id="exampleModalLabel"><img src="img/logo2.jpg" style="width: 45px;;" alt=""> ĐĂNG NHẬP</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <label for="" class="my-1 text-dark">Nhập tên tài khoản<span class="text-danger">*</span></label>
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="tendangnhap" placeholder="name@example.com">
+                                    <label for="floatingInput" class="text-success">Tên tài khoản</label>
+                                </div>
+                                <label for="" class="my-1 text-dark">Nhập mật khẩu<span class="text-danger">*</span></label>
+                                <div class="form-floating input-group mb-3">
+                                    <input class="form-control ip" type="password" id="matkhaudangnhap" placeholder="name@example.com">
+                                    <span class="input-group-text bg-dark" id="basic-addon2">
+                                        <i class="fa-solid fa-eye eyeMo hidden text-light"></i>
+                                        <i class="fa-solid fa-eye-slash eyeDong text-light"></i>
+                                    </span>
+                                    <label for="floatingInput" class="text-success">Mật khẩu</label>
+
+                                </div>
+                                <hr class="text-success">
+                                <label for="" class="my-1 text-center text-success h6">Hoặc đăng nhập bằng</label>
+                                <center>
+                                    <button type="button" class="btn btn-primary rounded-pill my-1"><span class="fa-brands fa-facebook " style="font-size:17px ;"></span> Đăng nhập bằng Facebook</button>
+                                    <button type="button" class="btn btn-danger rounded-pill my-1 px-4"><span class="fa-brands fa-google" style="font-size:17px ;"></span> Đăng nhập bằng Google</button>
+                                </center>
+                            </div>
+                            <center>
+                                <button type="button" class="btn btn-success px-5 my-2" onclick="dangnhap()">Đăng nhập</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <span class="px-2 py-1"> <a class="nutmenu" href="#"><i class="bi bi-person-plus-fill"></i> Đăng ký </a></span>
+                <button class="nutan" onclick="nutan()"><i class="bi bi-eye-slash-fill" ></i></button>
+                <div class="form-check form-switch">
+                    <input class="form-check-input my-2 mx-1" type="checkbox" id="dee" onclick="h()">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <button class="nuthien" id="nuthien" onclick="nuthien()"><i class="bi bi-eye-fill"></i></button>
+    <!--Header-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark px-4 fixed-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="javascript:void(0)"><i class="bi bi-book-half"></i> Books Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item my-2 px-4">
+                        <a class="nav-link text-white nut" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item my-2 px-5">
+                        <a class="nav-link text-white nut" href="#chayhang">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item my-2 px-5">
+                        <a class="nav-link text-white nut" href="#tieuthuyet">Giảm giá</a>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a class="nav-link" href="javascript:void(0)">
+                            <div class="input-group">
+                                <div class="input-group-text bg-white" id="btnGroupAddon"><i class="bi bi-search"></i></div>
+                                <input type="text" class="form-control" placeholder="Tìm kiếm..." aria-label="Input group example" aria-describedby="btnGroupAddon">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item my-2 px-5">
+                        <a class="nav-link text-white nut" href="javascript:void(0)"><i class="bi bi-cart-fill"></i> Giỏ hàng</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Form Đăng Ký-->
+    <div class="container mt-3 my-3 ">
+        <h2 class="d-flex justify-content-center text-success">ĐĂNG KÝ TÀI KHOẢN BOOK STORE</h2>
+        <div class="card  " style="width:100%;">
+            <div class="card-header d-flex justify-content-center h5 bg-success text-white">ĐĂNG KÝ</div>
+            <div class="card-body d-flex justify-content-center formbody">
+                <table class="m-2 h5 text-dark">
+                    <tr>
+                        <td>
+                            Tên tài khoản:
+                        </td>
+                        <td>
+                            <div>
+                                <input type="text" class="form-control" id="tentaikhoan" placeholder="Ví dụ: thanhan02">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Mật khẩu:
+                        </td>
+                        <td>
+                            <div>
+                                <input type="password" class="form-control" id="matkhau" placeholder="Lớn hơn 8 ký tự">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Nhập lại mật khẩu:
+                        </td>
+                        <td>
+                            <div>
+                                <input type="password" class="form-control" id="nhaplaimatkhau" placeholder="Lớn hơn 8 ký tự">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Giới tính:
+                        </td>
+                        <td>
+                            <span class="form-check">
+                                <input class="form-check-input" type="radio" name="gioitinh" id="gioitinh1" value="Nam">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                              Nam
+                            </label>
+                            </span>
+                            <span class="form-check">
+                                <input class="form-check-input" type="radio" name="gioitinh" id="gioitinh2" value="Nữ">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                              Nữ
+                            </label>
+                            </span>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            Quê Quán:
+                        </td>
+                        <td>
+                            <select id="quequan" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                <option value="0">Chọn Quê Quán</option>
+                                <option value="Cần Thơ">Cần Thơ</option>
+                                <option value="Hậu Giang">Hậu Giang</option>
+                                <option value="Vĩnh Long">Vĩnh Long</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span> Đồng ý với điều khoản</span></td>
+                        <td>
+                            <span class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="nutcheck">
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="card-footer d-flex justify-content-center bg-success">
+                <button class=" btn btn-light " onclick="dangky()">Đăng ký</button>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <footer class="text-center text-lg-start bg-success text-white ">
+        <section class=" pt-3 border-bottom ">
+            <p class="text-center h2 "><i class="bi bi-book-half "></i> BOOKSTORE</p>
+        </section>
+        <section>
+            <div class="container text-center text-md-start mt-5 ">
+                <div class="row mt-3 r ">
+                    <div class="col-md-3 mx-auto mb-4 ">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 ">
+                            DỊCH VỤ
+                        </h6>
+                        <p>
+                            <a href="#! " class="text-none ">Điều khoản sử dụng</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-none ">Chính sách bảo mật</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-none ">Phương thức ưu đãi</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-none ">Chăm sóc khách hàng</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3 mx-auto mb-4 ">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 ">
+                            TÀI KHOẢN CỦA TÔI
+                        </h6>
+                        <p>
+                            <a href=" " class="text-none ">Đăng nhập/Tạo tài khoản mới</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-none ">Chi tiết tài khoản</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-none ">Ưu đãi</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-none ">Lịch sử mua hàng</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3 mx-auto mb-md-0 mb-4 ">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 ">
+                            LIÊN HỆ
+                        </h6>
+                        <p><i class="fas fa-home me-3 "></i> Trường Cao Đẳng Cần Thơ</p>
+                        <p>
+                            <i class="fas fa-envelope me-3 "></i> akaza369@bookstore.com.vn
+                        </p>
+                        <p><i class="fas fa-phone me-3 "></i>07113952103</p>
+                    </div>
+                    <div class="col-md-3 mx-auto mb-4 border-start ">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.0326630758086!2d105.76298841376212!3d10.0141606755404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a088337f302b39%3A0x6ae5bb5ecf4928b9!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEPhuqduIFRoxqEsIDQxMyDEkcaw4budbmcgMzAgVGjDoW5nIDQsIHBoxrDhu51uZyBIxrBuZyBM4bujaSwgcXXhuq1uIE5pbmggS2nhu4F1LCA0MTMgxJDGsOG7nW5nIDMwIFRow6FuZyA0LCBIxrBuZyBM4bujaSwgTmluaCBLaeG7gXUsIEPhuqduIFRoxqEgOTIwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1654954698805!5m2!1svi!2s "
+                            width="100% " height="300px " style="border:0; " class="maps " allowfullscreen=" " loading="lazy " referrerpolicy="no-referrer-when-downgrade "></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!--Dialog-->
+    <div id="box" class="bg-success">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ywd_KulXEwU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+</body>
+<script src="script.js "></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="jquery-ui-1.13.2/jquery-ui.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#gy').click(function() {
+            var gopy = prompt("Nhập góp ý của bạn vào phía bên dưới")
+            if (gopy != "") {
+                alert("Góp ý thành công ! Cảm ơn bạn đã góp ý")
+            } else {
+                alert("Góp ý không thành công !");
+            }
+        });
+    });
+    $(document).ready(function() {
+        $("#kenh").click(function() {
+            $("#box").dialog({
+                modal: true,
+                fluid: true,
+                title: 'Review các kênh sách hay',
+                width: 605,
+                height: 405
+            })
+        })
+    })
+</script>
+
+</html>
